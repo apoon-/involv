@@ -1,9 +1,12 @@
 <%= link_to '+ Submit a New Issue', new_issue_path %>
 
 <% @issues.each do |issue| %>
+  <div class = "issue">
     <h1><%= link_to issue.name, issue_path(issue) %></h1>
-    <%= issue.description %>
+    <%= issue.description.slice(0,100) %>...
+  </div>
 <% end %>
+
 
 <br>
 
