@@ -13,3 +13,7 @@
  *= require_tree .
  */
 
+.right {
+  position: absolute !important;
+  right: 0 !important;
+}

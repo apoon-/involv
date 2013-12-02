@@ -11,6 +11,6 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to root_url, :notice => "Logged Out"
+    redirect_to issues_url, :notice => "Logged Out"
   end
 end
