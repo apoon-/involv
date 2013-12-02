@@ -1,5 +1,5 @@
 class IssuesController < ApplicationController
-  before_action :set_issue, only: [:show, :edit, :update, :destroy]
+  before_filter :require_login, :only => :secret
 
   # GET /issues
   # GET /issues.json
@@ -10,6 +10,7 @@ class IssuesController < ApplicationController
   # GET /issues/1
   # GET /issues/1.json
   def show
+    @issue = Issue.find(params[:id])
   end
 
   # GET /issues/new
@@ -19,6 +20,7 @@ class IssuesController < ApplicationController
 
   # GET /issues/1/edit
   def edit
+    @issue = Issue.find(params[:id])
   end
 
   # POST /issues
