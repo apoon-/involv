@@ -1,5 +1,5 @@
 class IssuesController < ApplicationController
-  before_filter :require_login, :only => :secret
+  before_filter :require_login, :except => [:index, :show]
 
   # GET /issues
   # GET /issues.json

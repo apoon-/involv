@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @issue.name %>
-</p>
+<%= link_to 'Back', issues_path %> | 
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Destroy', @issue, method: :delete, data: { confirm: 'Are you sure?' } %>
 
+<h1> <%= @issue.name %> </h1>
 
 <p>
   <%= image_tag (@issue.images)  %>
@@ -15,6 +15,4 @@
   <%= @issue.description %>
 </p>
 
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
-<%= link_to 'Back', issues_path %> |
-<%= link_to 'Destroy', @issue, method: :delete, data: { confirm: 'Are you sure?' } %>
+
